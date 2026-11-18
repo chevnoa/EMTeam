@@ -21,8 +21,8 @@ header p{margin:0 auto;max-width:520px;opacity:.9}
 .cd{display:flex;justify-content:center;gap:10px;margin-top:16px}
 .cd div{background:rgba(46,45,47,.08);border-radius:12px;padding:10px 0;width:72px}
 .cd b{display:block;font-size:1.7rem}.cd span{font-size:.7rem;text-transform:uppercase;opacity:.8}
-nav{position:sticky;top:env(safe-area-inset-top,0px);background:var(--card);border-bottom:1px solid var(--bd);z-index:5;overflow-x:auto;white-space:nowrap}
-nav a{display:inline-block;padding:13px 14px;color:var(--tx);text-decoration:none;font-size:.92rem;font-weight:500}
+nav{position:sticky;top:10px;background:#c8296b;box-shadow:0 2px 8px rgba(0,0,0,.15);z-index:5;overflow-x:auto;white-space:nowrap}
+nav a{display:inline-block;padding:8px 14px;color:#fff;text-decoration:none;font-size:.88rem;font-weight:700}
 section{padding:40px 0 8px}
 h2{font-size:1.5rem;margin:0 0 12px}
 h2::after{content:"";display:block;width:40px;height:3px;background:var(--ac);margin-top:6px;border-radius:2px}
@@ -72,7 +72,7 @@ var T=new Date("2027-04-17T12:00:00+02:00").getTime(),$=function(i){return docum
 function p(n){return n<10?"0"+n:""+n}
 function tick(){var q=Math.floor(Math.max(0,T-Date.now())/1000);
 $("d").textContent=Math.floor(q/86400);$("h").textContent=p(Math.floor(q%86400/3600));$("m").textContent=p(Math.floor(q%3600/60));$("sc").textContent=p(q%60)}
-function fade(){var b=$("bgl"),h=Math.max(320,innerHeight*.8);b.style.opacity=Math.max(0,1-scrollY/h).toFixed(3)}
+function fade(){var b=$("bgl"),h=Math.max(160,innerHeight*.3);b.style.opacity=Math.max(0,1-scrollY/h).toFixed(3)}
 tick();setInterval(tick,1000);fade();
 addEventListener("scroll",fade,{passive:true});addEventListener("resize",fade);
 })();
